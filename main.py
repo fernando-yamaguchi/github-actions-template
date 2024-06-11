@@ -18,7 +18,7 @@ logger.addHandler(logger_file_handler)
 
 try:
     HUBSPOT_TOKEN = os.environ["HUBSPOT_TOKEN"]
-    logger.info("Token not available!")
+    logger.info("Token available!")
 except KeyError:
     HUBSPOT_TOKEN = "Token not available!"
     logger.info("Token not available!")
