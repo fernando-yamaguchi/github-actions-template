@@ -4,3 +4,6 @@
 2024-06-11 18:37:22,523 - __main__ - ERROR - Erro ao acessar a API: 401
 2024-06-11 18:41:39,040 - __main__ - INFO - Starting Script
 2024-06-11 18:41:39,154 - __main__ - ERROR - Erro ao acessar a API: 403
+2024-06-11 18:54:14,906 - __main__ - INFO - Token available!
+2024-06-11 18:54:14,906 - __main__ - INFO - Starting Script
+2024-06-11 18:54:14,997 - __main__ - ERROR - Erro ao acessar a API: 401
