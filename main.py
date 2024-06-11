@@ -28,8 +28,6 @@ except KeyError:
 if __name__ == "__main__":
     logger.info(f"Starting Script")
 
-    authorization = f"Bearer {HUBSPOT_TOKEN}"
-    logger.info(f"Authorization: {authorization}")
     headers = {
     'accept': "application/json",
     'authorization': f"Bearer {HUBSPOT_TOKEN}"
