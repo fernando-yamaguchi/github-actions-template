@@ -33,13 +33,11 @@ if __name__ == "__main__":
     'authorization': f"Bearer {HUBSPOT_TOKEN}"
     }
 
-    # r = requests.get('https://api.hubapi.com/crm/v3/objects/users/', headers=headers)
-    # if r.status_code == 200:
-    #     data = r.json()
-    #     user_id = data["results"][0]["id"]
-    #     logger.info(f'ID do primeiro usuário: {user_id}')
+    r = requests.get('https://api.hubapi.com/crm/v3/objects/users/', headers=headers)
+    if r.status_code == 200:
+        data = r.json()
+        user_id = data["results"][0]["id"]
+        logger.info(f'ID do primeiro usuário: {user_id}')
 
-    # else :
-    #     logger.error(f"Erro ao acessar a API: {r.status_code}")
-
-    logger.info("Hello World!")
+    else :
+        logger.error(f"Erro ao acessar a API: {r.status_code}")
