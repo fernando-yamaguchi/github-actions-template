@@ -27,7 +27,14 @@ except KeyError:
 if __name__ == "__main__":
     logger.info(f"Starting Script")
 
-    r = requests.get('https://api.hubapi.com/crm/v3/objects/users/')
+    headers = {
+    'accept': "application/json",
+    'authorization': f"Bearer {HUBSPOT_TOKEN}"
+    }
+
+    querystring = {"limit":"10","archived":"false"}
+
+    r = requests.get('https://api.hubapi.com/crm/v3/objects/users/', headers=headers, params=querystring)
     if r.status_code == 200:
         data = r.json()
         user_id = data["results"][0]["id"]
