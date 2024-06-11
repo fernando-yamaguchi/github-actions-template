@@ -1,11 +1,8 @@
 name: run main.py
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes
+    - cron: '0 8 * * *'  # Everyday 8am UTC time
 
 jobs:
   build:
