@@ -32,3 +32,7 @@ if __name__ == "__main__":
         data = r.json()
         user_id = data["results"][0]["id"]
         logger.info(f'ID do primeiro usuário: {user_id}')
+
+    else :
+        logger.error(f"Erro ao acessar a API: {r.status_code}")
+        
