@@ -25,7 +25,7 @@ except KeyError:
 
 
 if __name__ == "__main__":
-    logger.info(f"Token value: {HUBSPOT_TOKEN}")
+    logger.info(f"Starting Script")
 
     r = requests.get('https://api.hubapi.com/crm/v3/objects/users/')
     if r.status_code == 200:
@@ -35,4 +35,3 @@ if __name__ == "__main__":
 
     else :
         logger.error(f"Erro ao acessar a API: {r.status_code}")
-        
