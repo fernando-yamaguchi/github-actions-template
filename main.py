@@ -18,7 +18,7 @@ logger.addHandler(logger_file_handler)
 
 try:
     HUBSPOT_TOKEN = os.environ["HUBSPOT_TOKEN"]
-    logger.info("Token available!")
+    logger.info("Token not available!")
 except KeyError:
     HUBSPOT_TOKEN = "Token not available!"
     logger.info("Token not available!")
@@ -33,9 +33,7 @@ if __name__ == "__main__":
     'authorization': f"Bearer {HUBSPOT_TOKEN}"
     }
 
-    querystring = {"limit":"10","archived":"false"}
-
-    r = requests.get('https://api.hubapi.com/crm/v3/objects/users/', headers=headers, params=querystring)
+    r = requests.get('https://api.hubapi.com/crm/v3/objects/users/', headers=headers)
     if r.status_code == 200:
         data = r.json()
         user_id = data["results"][0]["id"]
