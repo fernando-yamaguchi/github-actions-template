@@ -7,3 +7,6 @@
 2024-06-11 18:54:14,906 - __main__ - INFO - Token available!
 2024-06-11 18:54:14,906 - __main__ - INFO - Starting Script
 2024-06-11 18:54:14,997 - __main__ - ERROR - Erro ao acessar a API: 401
+2024-06-11 19:02:26,101 - __main__ - INFO - Token not available!
+2024-06-11 19:02:26,102 - __main__ - INFO - Starting Script
+2024-06-11 19:02:26,195 - __main__ - ERROR - Erro ao acessar a API: 401
