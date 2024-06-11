@@ -18,6 +18,7 @@ logger.addHandler(logger_file_handler)
 
 try:
     HUBSPOT_TOKEN = os.environ["HUBSPOT_TOKEN"]
+    logger.info("Token available!")
 except KeyError:
     HUBSPOT_TOKEN = "Token not available!"
     logger.info("Token not available!")
@@ -27,6 +28,8 @@ except KeyError:
 if __name__ == "__main__":
     logger.info(f"Starting Script")
 
+    authorization = f"Bearer {HUBSPOT_TOKEN}"
+    logger.info(f"Authorization: {authorization}")
     headers = {
     'accept': "application/json",
     'authorization': f"Bearer {HUBSPOT_TOKEN}"
